@@ -25,6 +25,6 @@ export default function PlatformLogo({ color, height = 20 }: Props) {
     //   />
     // </svg>
     
-    <img src="/upflock.png" height={height} />
+    <img src="/logo.png" height={height} />
   );
 }
