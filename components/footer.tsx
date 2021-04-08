@@ -46,40 +46,10 @@ export default function Footer() {
           rights reserved.
         </div>
         <div className={styles['footer-center-group']}>
-          <p className={styles['footer-paragraph']}>
-            <a
-              href={REPO}
-              className={styles['footer-link']}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Source Code
-            </a>
-          </p>
-          <div className={styles['footer-separator']} />
-          <p className={styles['footer-paragraph']}>
-            <a
-              href={CODE_OF_CONDUCT}
-              className={styles['footer-link']}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Code of Conduct
-            </a>
-          </p>
           {LEGAL_URL && (
             <>
               <div className={styles['footer-separator']} />
-              <p className={styles['footer-paragraph']}>
-                <a
-                  href={LEGAL_URL}
-                  className={styles['footer-link']}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Legal
-                </a>
-              </p>
+              
             </>
           )}
         </div>
