@@ -29,6 +29,7 @@ export const SHORT_DATE = 'Oct 27 - 9:00am PST';
 export const FULL_DATE = 'Oct 27th 9am Pacific Time (GMT-7)';
 export const TWEET_TEXT = META_DESCRIPTION;
 export const COOKIE = 'user-id';
+export const META_CONTENT = 'UPFLOCK - Digital Network';
 
 // Remove process.env.NEXT_PUBLIC_... below and replace them with
 // strings containing your own privacy policy URL and copyright holder name
@@ -70,7 +71,7 @@ export const NAVIGATION = [
   },
   {
     name: 'PHOTO BOOTH',
-    route: '/booth'
+    route: '/photobooth'
   },
   {
     name: 'LEADERBOARD',

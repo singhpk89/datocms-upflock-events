@@ -23,6 +23,7 @@ import redis from '@lib/redis';
 import Page from '@components/page';
 import ConfContent from '@components/index';
 import { SITE_URL, SITE_NAME, META_DESCRIPTION, SAMPLE_TICKET_NUMBER } from '@lib/constants';
+import { META_CONTENT } from '@lib/constants';
 
 type Props = {
   username: string | null;
@@ -44,7 +45,7 @@ export default function TicketShare({ username, ticketNumber, name, usernameFrom
         url: `${SITE_URL}/tickets/${username}`
       }
     : {
-        title: 'Ticket Demo - Virtual Event Starter Kit',
+        title: META_CONTENT,
         description: META_DESCRIPTION,
         image: `/api/ticket-images/${usernameFromParams}`,
         url: `${SITE_URL}/tickets/${usernameFromParams}`
