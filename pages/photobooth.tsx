@@ -9,7 +9,7 @@ import Webcam from "react-webcam";
 import { META_DESCRIPTION } from '@lib/constants';
 
 
-export default function PhotoBooth({ speakers }: Props) {
+export default function PhotoBooth() {
 
     const height = window.screen.height;
     const camFrame = height * .20;
