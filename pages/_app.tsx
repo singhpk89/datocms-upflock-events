@@ -22,7 +22,6 @@ import type { AppProps } from 'next/app';
 import NProgress from '@components/nprogress';
 import ResizeHandler from '@components/resize-handler';
 import { useEffect } from 'react';
-import { Provider } from 'next-auth/client'
 
 
 export default function App({ Component, pageProps }: AppProps) {
