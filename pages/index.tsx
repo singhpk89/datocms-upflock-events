@@ -16,17 +16,12 @@
 
 import { useRouter } from 'next/router';
 import { SkipNavContent } from '@reach/skip-nav';
-import { signIn, signOut, useSession } from 'next-auth/client'
-import LoginPage from '@components/LoginPage';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
 
 import Page from '@components/page';
 import ConfContent from '@components/index';
 import { META_CONTENT, META_DESCRIPTION } from '@lib/constants';
 
 export default function Conf() {
-  const [ session, loading ] = useSession()
   const { query } = useRouter();
   const meta = {
     title: META_CONTENT,
@@ -41,20 +36,12 @@ export default function Conf() {
   };
 
   return (
-    <>
-
-       <Page meta={meta} fullViewport>
-            <SkipNavContent />
-            <ConfContent
-              defaultUserData={defaultUserData}
-              defaultPageState={query.ticketNumber ? 'ticket' : 'registration'}
-            />
-          </Page>
-      
-    </>
-    
+    <Page meta={meta} fullViewport>
+      <SkipNavContent />
+      <ConfContent
+        defaultUserData={defaultUserData}
+        defaultPageState={query.ticketNumber ? 'ticket' : 'registration'}
+      />
+    </Page>
   );
 }
-
-
-
