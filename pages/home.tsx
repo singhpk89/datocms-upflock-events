@@ -17,8 +17,6 @@
 import { useRouter } from 'next/router';
 import { SkipNavContent } from '@reach/skip-nav';
 import { signIn, signOut, useSession } from 'next-auth/client'
-import LoginPage from '@components/LoginPage';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 import Page from '@components/page';
@@ -42,14 +40,23 @@ export default function Conf() {
 
   return (
     <>
+      {!session &&
+       <>
+        <button onClick={() => signIn()}>Sign in</button>
+       </>
+      }
 
-       <Page meta={meta} fullViewport>
+      {session && 
+        <> 
+          <Page meta={meta} fullViewport>
             <SkipNavContent />
             <ConfContent
               defaultUserData={defaultUserData}
               defaultPageState={query.ticketNumber ? 'ticket' : 'registration'}
             />
           </Page>
+       </> 
+      }
       
     </>
     

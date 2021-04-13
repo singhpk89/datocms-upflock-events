@@ -134,7 +134,8 @@ export default function Form({ sharePage }: Props) {
           })}
         >
           <input
-            className={styles.input}
+          
+                      className={styles.input}
             autoComplete="off"
             type="email"
             id="email-input-field"
