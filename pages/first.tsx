@@ -6,7 +6,7 @@ export default function login() {
   const [username, setUserName] = useState("");
   const [email, setEmail] = useState('');
   
-  function handleClick(e: React.ChangeEvent<HTMLButtonElement>)
+  function handleClick()
   {
     
     if(username!="")
@@ -67,7 +67,7 @@ export default function login() {
 
   <div className="form__field">
             <Link href="/">
-            <input type="submit" onClick={() => handleClick}  value="Sign In" />
+            <input type="submit" onClick={handleClick}  value="Sign In" />
             </Link>       
   </div>
 </div>
