@@ -42,81 +42,81 @@
          
 
 
-<table class="table">
-    <thead class="leaderboard-header h6">
+<table className="table">
+    <thead className="leaderboard-header h6">
         <tr>
-            <th class="align-middle" scope="col">Rank</th>
-            <th class="align-middle" scope="col">Team</th>
-            <th class="align-middle" scope="col">W</th>
-            <th class="align-middle" scope="col">L</th>
-            <th class="align-middle" scope="col">α</th>
-            <th class="align-middle" scope="col">Points</th>
+            <th className="align-middle" scope="col">Rank</th>
+            <th className="align-middle" scope="col">Team</th>
+            <th className="align-middle" scope="col">W</th>
+            <th className="align-middle" scope="col">L</th>
+            <th className="align-middle" scope="col">α</th>
+            <th className="align-middle" scope="col">Points</th>
         </tr>
     </thead>
-    <tbody class="leaderboard-components h6">
+    <tbody className="leaderboard-components h6">
         <tr>
-            <th class="align-middle" scope="row">1</th>
-            <td class="text-left align-middle">As Long As Will Loses</td>
-            <td class="align-middle">1</td>
-            <td class="align-middle">2</td>
-            <td class="align-middle">4</td>
-            <td class="align-middle">500</td>
+            <th className="align-middle" scope="row">1</th>
+            <td className="text-left align-middle">As Long As Will Loses</td>
+            <td className="align-middle">1</td>
+            <td className="align-middle">2</td>
+            <td className="align-middle">4</td>
+            <td className="align-middle">500</td>
         </tr>
         <tr>
-            <th class="align-middle" scope="row">2</th>
-            <td class="text-left align-middle">Will Sucks At Trading</td>
-            <td class="align-middle">1</td>
-            <td class="align-middle">2</td>
-            <td class="align-middle">4</td>
-            <td class="align-middle">400</td>
+            <th className="align-middle" scope="row">2</th>
+            <td className="text-left align-middle">Will Sucks At Trading</td>
+            <td className="align-middle">1</td>
+            <td className="align-middle">2</td>
+            <td className="align-middle">4</td>
+            <td className="align-middle">400</td>
         </tr>
         <tr>
-            <th class="align-middle" scope="row">3</th>
-            <td class="text-left align-middle">RCL To The Moon</td>
-            <td class="align-middle">1</td>
-            <td class="align-middle">2</td>
-            <td class="align-middle">3</td>
-            <td class="align-middle">300</td>
+            <th className="align-middle" scope="row">3</th>
+            <td className="text-left align-middle">RCL To The Moon</td>
+            <td className="align-middle">1</td>
+            <td className="align-middle">2</td>
+            <td className="align-middle">3</td>
+            <td className="align-middle">300</td>
         </tr>
         <tr>
-            <th class="align-middle" scope="row">4</th>
-            <td class="text-left align-middle"> D-Rated </td>
-            <td class="align-middle">1</td>
-            <td class="align-middle">2</td>
-            <td class="align-middle">3</td>
-            <td class="align-middle">100</td>
+            <th className="align-middle" scope="row">4</th>
+            <td className="text-left align-middle"> D-Rated </td>
+            <td className="align-middle">1</td>
+            <td className="align-middle">2</td>
+            <td className="align-middle">3</td>
+            <td className="align-middle">100</td>
         </tr>
         <tr>
-            <th class="align-middle" scope="row">5</th>
-            <td class="text-left align-middle">Trust In Buffet</td>
-            <td class="align-middle">1</td>
-            <td class="align-middle">2</td>
-            <td class="align-middle">2</td>
-            <td class="align-middle">50</td>
+            <th className="align-middle" scope="row">5</th>
+            <td className="text-left align-middle">Trust In Buffet</td>
+            <td className="align-middle">1</td>
+            <td className="align-middle">2</td>
+            <td className="align-middle">2</td>
+            <td className="align-middle">50</td>
         </tr>
         <tr>
-            <th class="align-middle" scope="row">6</th>
-            <td class="text-left align-middle">Janet Yellen 2020</td>
-            <td class="align-middle">0</td>
-            <td class="align-middle">3</td>
-            <td class="align-middle">0</td>
-            <td class="align-middle">400</td>
+            <th className="align-middle" scope="row">6</th>
+            <td className="text-left align-middle">Janet Yellen 2020</td>
+            <td className="align-middle">0</td>
+            <td className="align-middle">3</td>
+            <td className="align-middle">0</td>
+            <td className="align-middle">400</td>
         </tr>
         <tr>
-            <th class="align-middle" scope="row">7</th>
-            <td class="text-left align-middle">Superior Returns Guaranteed</td>
-            <td class="align-middle">0</td>
-            <td class="align-middle">3</td>
-            <td class="align-middle">0</td>
-            <td class="align-middle">20</td>
+            <th className="align-middle" scope="row">7</th>
+            <td className="text-left align-middle">Superior Returns Guaranteed</td>
+            <td className="align-middle">0</td>
+            <td className="align-middle">3</td>
+            <td className="align-middle">0</td>
+            <td className="align-middle">20</td>
         </tr>
         <tr>
-            <th class="align-middle" scope="row">8</th>
-            <td class="text-left align-middle">Only Bad Choices</td>
-            <td class="align-middle">0</td>
-            <td class="align-middle">3</td>
-            <td class="align-middle">0</td>
-            <td class="align-middle">-10</td>
+            <th className="align-middle" scope="row">8</th>
+            <td className="text-left align-middle">Only Bad Choices</td>
+            <td className="align-middle">0</td>
+            <td className="align-middle">3</td>
+            <td className="align-middle">0</td>
+            <td className="align-middle">-10</td>
         </tr>
     </tbody>
 </table>

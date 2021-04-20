@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 import Link from 'next/link'
 
 export default function login() {
@@ -6,7 +6,7 @@ export default function login() {
   const [username, setUserName] = useState("");
   const [email, setEmail] = useState('');
   
-  function handleClick(e)
+  function handleClick(e: React.ChangeEvent<HTMLButtonElement>)
   {
     
     if(username!="")
@@ -20,18 +20,30 @@ export default function login() {
     }
 
   }
-  function handleChange(id,e)
-  {
-    
-    if(id=="username")
-    {
+
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+    // No longer need to cast to any - hooray for react!
+    // alert(e.target.id);
+    if(e.target.id == "login__username"){
       setUserName(e.currentTarget.value)
-    }
-    else
-    {
+    }else{
       setEmail(e.currentTarget.value)
     }
+
   }
+
+  // function handleChange(id,e)
+  // {
+    
+  //   if(id=="username")
+  //   {
+  //     setUserName(e.currentTarget.value)
+  //   }
+  //   else
+  //   {
+  //     setEmail(e.currentTarget.value)
+  //   }
+  // }
    return (
       <div className="clsLogin">
         
@@ -43,19 +55,19 @@ export default function login() {
     <label ><svg className="icon">
     
       </svg><span className="hidden">Username</span></label>
-    <input  id="login__username" onChange={(e)=>{handleChange("username",e)}} value={username} type="text" name="username" className="form__input" placeholder="Username" required />
+    <input  id="login__username" onChange={handleChange} value={username} type="text" name="username" className="form__input" placeholder="Username" required />
   </div>
 
   <div className="form__field">
     <label ><svg className="icon">
 
       </svg><span className="hidden">Password</span></label>
-    <input id="login__email" type="text" name="email" onChange={(e)=>{handleChange("email",e)}} value={email} className="form__input" placeholder="Enter Email" required />
+    <input id="login__email" type="text" name="email" onChange={handleChange} value={email} className="form__input" placeholder="Enter Email" required />
   </div>
 
   <div className="form__field">
             <Link href="/">
-            <input type="submit" onClick={(e)=>{handleClick(e)}}  value="Sign In" />
+            <input type="submit" onClick={() => handleClick}  value="Sign In" />
             </Link>       
   </div>
 </div>
