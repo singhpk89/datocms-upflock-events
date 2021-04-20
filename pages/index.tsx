@@ -8,19 +8,21 @@ import { META_DESCRIPTION } from '@lib/constants';
 import Login from  './first';
 
 export default function Conf() {
-  debugger;
-  const [isLogin, setuserNAME] = useState(false);
+  const [isLogin, setIsLogin] = useState(false);
   
   useEffect(() => {
   
-    debugger;
-    var user = (localStorage.getItem("username"));
-    setuserNAME(user==""?false:user==undefined?false:true);
+    if(localStorage.getItem("username") && localStorage.getItem("username") != ""){
+      setIsLogin(true);
+    }else{
+      setIsLogin(false);
+    }
+    
   })
 
   const { query } = useRouter();
   const meta = {
-    title: 'Demo - Virtual Event Starter Kit',
+    title: 'Upflock - Digital Platform',
     description: META_DESCRIPTION
   };
 
