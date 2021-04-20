@@ -42,9 +42,13 @@ export default function Conf({
   const [username, setuserNAME] = useState(false);
   
   useEffect(() => {
-  
-    var user = (localStorage.getItem("username"));
-    setuserNAME(user);
+
+    if(localStorage.getItem("username") && localStorage.getItem("username") != ""){
+      setuserNAME(true);
+    }else{
+      setuserNAME(false);
+    }
+    
   })
 
   return (
