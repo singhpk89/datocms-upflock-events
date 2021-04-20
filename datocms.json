@@ -1,10 +1,10 @@
 {
-  "name": "Upflock",
+  "name": "Virtual Event Starter Kit",
   "description": "Fully customizable starter kit for your virtual event.",
   "previewImage": "https://demo.vercel.events/twitter-card.png",
   "datocmsProjectId": "37685",
-  "deploymentType": "Upflock",
+  "deploymentType": "vercel",
   "buildCommand": "npm run build",
   "datocmsApiTokenEnvName": "DATOCMS_READ_ONLY_API_TOKEN",
-  "livePreviewUrl": "https://virtual.upflockdigitalconference.com"
+  "livePreviewUrl": "https://demo.vercel.events/"
 }

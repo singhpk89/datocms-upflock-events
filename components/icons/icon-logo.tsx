@@ -37,5 +37,6 @@ export default function IconLogo({
     //   />
     // </svg>
     <img src="/logo.png" height={36} />
+
   );
 }

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import { PageState, ConfDataContext, UserData } from '@lib/hooks/use-conf-data';
 import Ticket from './ticket';
 import Layout from './layout';
@@ -22,6 +22,7 @@ import ConfContainer from './conf-container';
 import Hero from './hero';
 import Form from './form';
 import LearnMore from './learn-more';
+import Timer from './Timer';
 
 type Props = {
   defaultUserData: UserData;
@@ -34,8 +35,17 @@ export default function Conf({
   sharePage,
   defaultPageState = 'registration'
 }: Props) {
+  debugger;
   const [userData, setUserData] = useState<UserData>(defaultUserData);
   const [pageState, setPageState] = useState<PageState>(defaultPageState);
+
+  const [username, setuserNAME] = useState(false);
+  
+  useEffect(() => {
+  
+    var user = (localStorage.getItem("username"));
+    setuserNAME(user);
+  })
 
   return (
     <ConfDataContext.Provider
@@ -47,20 +57,17 @@ export default function Conf({
     >
       <Layout>
         <ConfContainer>
-          {pageState === 'registration' && !sharePage ? (
-            <>
-              <Hero />
-              <Form />
-              <LearnMore />
-            </>
-          ) : (
-            <Ticket
+
+        <>
+             
+              <Ticket
               username={userData.username}
               name={userData.name}
               ticketNumber={userData.ticketNumber}
               sharePage={sharePage}
             />
-          )}
+            </>
+          
         </ConfContainer>
       </Layout>
     </ConfDataContext.Provider>

@@ -21,18 +21,9 @@ module.exports = {
       'a.storyblok.com',
       'images.ctfassets.net',
       'images.prismic.io',
-      'cdn.aglty.io'
+      'cdn.aglty.io',
+      'localhost' // For Strapi
     ],
     imageSizes: [24, 64, 300]
-  },
-
-   env: {
-    'MYSQL_HOST': 'demo.c6cre86kvrjx.ap-south-1.rds.amazonaws.com',
-    'MYSQL_PORT': '3306',
-    'MYSQL_DATABASE': 'demo',
-    'MYSQL_USER': 'demo',
-    'MYSQL_PASSWORD': 'mysqldemo',
   }
-
-
 };

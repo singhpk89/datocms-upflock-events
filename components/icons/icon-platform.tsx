@@ -24,7 +24,7 @@ export default function PlatformLogo({ color, height = 20 }: Props) {
     //     fill={color}
     //   />
     // </svg>
-    
     <img src="/logo-full.png" height={36} />
+
   );
 }

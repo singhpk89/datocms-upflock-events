@@ -11,8 +11,8 @@ import { META_DESCRIPTION } from '@lib/constants';
 
 export default function PhotoBooth() {
 
-    const height = window.screen.height;
-    const camFrame = height * .20;
+    const height = 400;
+    const width = 320;
 
     
    
@@ -25,14 +25,23 @@ export default function PhotoBooth() {
         <Layout>
          
         
-         <Webcam
+        <div style={{
+        position: 'absolute', left: '50%', top: '50%',
+        transform: 'translate(-50%, -50%)'
+    }}
+        >
+
+        <Webcam
          
 
-         height={camFrame * 2}
-         width={camFrame * 3}
+         height={height }
+         width={width }
          mirrored={true}
          />
 
+
+        </div>
+         
 
         </Layout>
       </Page>

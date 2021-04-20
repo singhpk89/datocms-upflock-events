@@ -1,35 +1,29 @@
-/**
- * Copyright 2020 Vercel Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
+import { useState ,useEffect} from 'react';
 import { useRouter } from 'next/router';
 import { SkipNavContent } from '@reach/skip-nav';
-import LoginPage from '@components/LoginPage';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
 
 import Page from '@components/page';
 import ConfContent from '@components/index';
-import { META_CONTENT, META_DESCRIPTION } from '@lib/constants';
+import { META_DESCRIPTION } from '@lib/constants';
+import Login from  './first';
 
 export default function Conf() {
+  debugger;
+  const [isLogin, setuserNAME] = useState(false);
+  
+  useEffect(() => {
+  
+    debugger;
+    var user = (localStorage.getItem("username"));
+    setuserNAME(user==""?false:user==undefined?false:true);
+  })
+
   const { query } = useRouter();
   const meta = {
-    title: META_CONTENT,
+    title: 'Demo - Virtual Event Starter Kit',
     description: META_DESCRIPTION
   };
+
   const ticketNumber = query.ticketNumber?.toString();
   const defaultUserData = {
     id: query.id?.toString(),
@@ -40,19 +34,18 @@ export default function Conf() {
 
   return (
     <>
-
-       <Page meta={meta} fullViewport>
-            <SkipNavContent />
-            <ConfContent
-              defaultUserData={defaultUserData}
-              defaultPageState={query.ticketNumber ? 'ticket' : 'registration'}
-            />
-          </Page>
-      
+    {isLogin == false ?(      
+    <Login />
+     ) 
+    :
+  (  <Page meta={meta} fullViewport>
+      <SkipNavContent />
+      <ConfContent
+        defaultUserData={defaultUserData}
+        defaultPageState={query.ticketNumber ? 'ticket' : 'registration'}
+      />      
+    </Page>)
+    }
     </>
-    
   );
 }
-
-
-

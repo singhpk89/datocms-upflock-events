@@ -22,12 +22,12 @@ import { COPYRIGHT_HOLDER, SITE_NAME, CODE_OF_CONDUCT, LEGAL_URL, REPO } from '@
 export function HostedByVercel() {
   return (
     <a
-      href="https://virtual.upflockdigitalconference.com"
+      href="https://virtual.upflockdigitalconference.com/"
       className={cn(styles['footer-link'], styles['footer-logo'])}
       target="_blank"
       rel="noopener noreferrer"
     >
-      <div className={styles['secondary-text']}>Created by </div>
+      <div className={styles['secondary-text']}></div>
       <VercelLogo color="white" />
     </a>
   );
@@ -45,14 +45,7 @@ export default function Footer() {
           Copyright © {`${new Date().getFullYear()} `} {COPYRIGHT_HOLDER || `${SITE_NAME}.`} All
           rights reserved.
         </div>
-        <div className={styles['footer-center-group']}>
-          {LEGAL_URL && (
-            <>
-              <div className={styles['footer-separator']} />
-              
-            </>
-          )}
-        </div>
+        
       </div>
     </footer>
   );
