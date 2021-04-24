@@ -21,18 +21,22 @@ import styles from './schedule-sidebar.module.css';
 import Select from './select';
 import TalkCard from './talk-card';
 import { SHORT_DATE } from '@lib/constants';
-// RCE CSS
-// import 'react-chat-elements/dist/main.css';
-// // MessageBox component
-// import { MessageBox } from 'react-chat-elements';
-// import { ChatItem } from 'react-chat-elements'
-// import { SystemMessage } from 'react-chat-elements'
-// import { Input, Button } from 'react-chat-elements'
-// import { ChatList } from 'react-chat-elements'
-// import { Dropdown } from 'react-chat-elements'
+
 
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+
+import { ChatItem, ChatItemProps } from 'react-chat-elements'
+import { ChatList } from 'react-chat-elements'
+import { Input, Button } from 'react-chat-elements'
+import Chatbubble from './chats/chatbubble';
+import { resetIdCounter } from "react-tabs";
+import Quiz from './chats/quiz';
+
+
+
+
+
 
 
 
@@ -42,40 +46,96 @@ import 'react-tabs/style/react-tabs.css';
 
 type Props = {
   allStages: Stage[];
+ 
 };
+
+
 
 export default function ScheduleSidebar({ allStages }: Props) {
   const router = useRouter();
+
   const [currentStageSlug, setCurrentStageSlug] = useState(router.query.slug);
   const currentStage = allStages.find((s: Stage) => s.slug === currentStageSlug);
+  // const [messages, setMessages] = useState<ChatItemProps>();
+
+  resetIdCounter();
+
+
 
   useEffect(() => {
     setCurrentStageSlug(router.query.slug);
   }, [router.query.slug]);
 
+
+
+  // useEffect(() => {
+  //   setMessages(messages);
+  // }, [messages]);
+
+  
+  // function createMessage(title: String, subtitle: String){
+  //   const message : ChatItemProps = {
+  //     id:"1",
+  //     avatar:'https://facebook.github.io/react/img/logo.svg',
+  //     alt:'Reactjs',
+  //     title:'Facebook',
+  //     subtitle:'What are you doing?What are you doing?What are you doing?What are you doing?',
+  //     date:new Date(),
+  //   }
+  //    messages.push(message);
+  // }
+
+
+
+
   return (
     <div className={styles.schedule}>
-      <h3 className={styles.header}>Schedule</h3>
-      <p>{SHORT_DATE}</p>
-
       <Tabs>
-    <TabList>
-      <Tab>Chat</Tab>
-      <Tab>Q&A</Tab>
-      <Tab>Poll</Tab>
-    </TabList>
 
-    <TabPanel>
-    
+        <TabList>
+          <Tab><h3 className={styles.header} style={{ color: 'red' }}>Chat</h3></Tab>
+          <Tab><h3 className={styles.header} style={{ color: 'red' }}>Q&A</h3></Tab>
+          <Tab><h3 className={styles.header} style={{ color: 'red' }}>POLL</h3></Tab>
+        </TabList>
 
-    </TabPanel>
-    <TabPanel>
+        <TabPanel>
 
-    </TabPanel>
+        {/* <ChatList
+          className='chat-list'
+          dataSource={messages}
+        
+        />
 
-    <TabPanel>
-      <h2>Please wait poll will be display here...</h2>
-    </TabPanel>
+        <Input
+            placeholder="Type here..."
+            multiline={false}
+            rightButtons={
+                <Button
+                    color='white'
+                    backgroundColor='black'
+                    text='Send'
+                    onClick={() => {
+                      createMessage("","");
+                      alert(JSON.stringify(messages));
+                     
+                    }}
+                    />
+            }/>
+ */}
+
+<Chatbubble />
+        </TabPanel>
+
+        <TabPanel>
+
+          <Chatbubble />
+        
+
+        </TabPanel>
+
+        <TabPanel>
+          <Quiz />
+        </TabPanel>
   </Tabs>
 
 
@@ -84,3 +144,4 @@ export default function ScheduleSidebar({ allStages }: Props) {
     </div>
   );
 }
+

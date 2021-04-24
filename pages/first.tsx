@@ -2,7 +2,6 @@ import { ChangeEvent, useState } from 'react';
 import Link from 'next/link'
 
 export default function login() {
-  debugger;
   const [username, setUserName] = useState("");
   const [email, setEmail] = useState('');
   

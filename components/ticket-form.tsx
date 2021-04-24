@@ -134,10 +134,10 @@ export default function Form({ defaultUsername = '', setTicketGenerationState }:
 
         <Timer />
 
-      <button className={cn(
+      {/* <button className={cn(
             formStyles.submit,
             formStyles['generate-with-github'],
-          )} type="submit">Visit Us</button>
+          )} type="submit">Visit Us</button> */}
 
         {/* <p className={ticketFormStyles.description}>
           {githubEnabled ? (

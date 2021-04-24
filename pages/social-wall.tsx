@@ -14,17 +14,29 @@
  * limitations under the License.
  */
 
-module.exports = {
-  images: {
-    domains: [
-      'www.datocms-assets.com',
-      'a.storyblok.com',
-      'images.ctfassets.net',
-      'images.prismic.io',
-      'cdn.aglty.io',
-      'localhost', // For Strapi
-      '*'
-    ],
-    imageSizes: [24, 64, 300]
-  }
-};
+
+ import Page from '@components/page';
+ import Layout from '@components/layout';
+ import Header from '@components/header';
+ 
+ import { META_DESCRIPTION } from '@lib/constants';
+import SocialWall from '@components/chats/socialwall';
+ 
+ 
+ export default function Wall() {
+   const meta = {
+     title: 'Social Wall',
+     description: META_DESCRIPTION
+   };
+ 
+   return (
+     <Page meta={meta}>
+       <Layout>
+         <Header hero="Social Wall" description={meta.description} />
+         <SocialWall />
+       </Layout>
+     </Page>
+   );
+ }
+ 
+ 

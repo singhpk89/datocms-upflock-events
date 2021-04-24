@@ -90,6 +90,15 @@ export type ConfUser = {
   createdAt: number;
 };
 
+
+export type ChatMsg = {
+  name?: string;
+  username?: string;
+  message?: string;
+  keyName?:string;
+};
+
+
 export type GitHubOAuthData =
   | {
       type: 'token';

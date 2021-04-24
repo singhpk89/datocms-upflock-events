@@ -36,7 +36,7 @@ export default function TicketVisual({
   size = 1,
   name,
   username,
-  ticketNumber,
+  ticketNumber = Math.floor(Math.random() * 9999)  ,
   ticketGenerationState = 'default'
 }: Props) {
   return (

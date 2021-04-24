@@ -72,7 +72,7 @@
    },
    {
      name: 'SOCIAL WALL',
-     route: '/jobs'
+     route: '/social-wall'
    }
  ];
  
