@@ -1,3 +1,4 @@
+
 import { ChatMsg } from '@lib/types';
 import  React from 'react'
 import {  ChangeEvent, useState, useEffect} from 'react'
@@ -129,9 +130,10 @@ function Chatbubble() {
                 
                 >
             <input
+
                 value={chatMessage}
-                placeholder="Write a new message"
-                className="new-message-input"
+                style={{height:'100%', width:'100%' , border: '1px red'}}
+                placeholder="Enter message"
                 onChange={handleChange}
                 onKeyDown = {
                     (e) => {
@@ -142,9 +144,15 @@ function Chatbubble() {
                     }
                 }
             />
+            <button  style={{height:'40px', backgroundColor:'red', color: 'white', border: '2px red'}}  onClick={ 
+                (e) => {
+                    onSend(chatMessage)
+                    setChatMessage("");
+                } 
+                } >Send</button>
             </form>
         </div>
     )
 }
 
-export default Chatbubble
+export default Chatbubble;

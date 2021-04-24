@@ -17,10 +17,11 @@
 .background {
   background: #000;
   color: #fff;
-  min-height: 100vh;
-  min-height: var(--100vh);
+  height: 100vh;
+  height: var(--100vh);
   display: flex;
   flex-direction: column;
+  
 }
 
 .page {
@@ -28,6 +29,7 @@
   flex-direction: column;
   width: 100%;
   flex: 1;
+ 
 }
 
 .main {

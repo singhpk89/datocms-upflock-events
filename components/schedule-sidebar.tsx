@@ -126,7 +126,7 @@ export default function ScheduleSidebar({ allStages }: Props) {
 <Chatbubble />
         </TabPanel>
 
-        <TabPanel>
+        <TabPanel style={{height:'80vh'}}>
 
           <Chatbubble />
         
