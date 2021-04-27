@@ -1104,3 +1104,18 @@ a:hover, a:active, a:focus {
   text-decoration: none;
   outline: 0;
 }
+
+.react-html5-camera-photo-fullscreen > video, .react-html5-camera-photo-fullscreen > img {
+  width: 50vw  !important;
+  height:50vh  !important;
+}
+
+
+#container-circles {
+  position: absolute;
+  right: 20%;
+  top: 75%
+  /* bottom: -20px !important; */
+
+}
+

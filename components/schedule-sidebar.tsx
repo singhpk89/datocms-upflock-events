@@ -26,9 +26,6 @@ import { SHORT_DATE } from '@lib/constants';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 
-import { ChatItem, ChatItemProps } from 'react-chat-elements'
-import { ChatList } from 'react-chat-elements'
-import { Input, Button } from 'react-chat-elements'
 import Chatbubble from './chats/chatbubble';
 import { resetIdCounter } from "react-tabs";
 import Quiz from './chats/quiz';

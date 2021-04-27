@@ -55,13 +55,14 @@ function Chatbubble() {
             }
         
         
+            if(chatMessage != ""){
+                firebase.firestore().collection('chats').add({
+                    msg: msg,
+               });
+               setChatList([...chatList, msg]);
+            }
 
-        firebase.firestore().collection('chats').add({
-             msg: msg,
-        });
-
-
-        setChatList([...chatList, msg]);
+        
 
         
 
@@ -135,12 +136,9 @@ function Chatbubble() {
                 style={{height:'100%', width:'100%' , border: '1px red'}}
                 placeholder="Enter message"
                 onChange={handleChange}
-                onKeyDown = {
+                onKeyPress = {
                     (e) => {
-                        if(e.keyCode === 13) { 
-                            onSend(chatMessage); 
-                            setChatMessage("");
-                        }
+                        
                     }
                 }
             />

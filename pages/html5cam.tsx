@@ -1,4 +1,5 @@
-import {GetStaticProps}  from 'next'
+
+
 import Page from '@components/page';
 import Layout from '@components/layout';
 import Header from '@components/header';
