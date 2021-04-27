@@ -1,17 +1,21 @@
 import { ChangeEvent, useState } from 'react';
 import Link from 'next/link'
+import { register } from '@lib/user-api';
+
 
 export default function login() {
   const [username, setUserName] = useState("");
   const [email, setEmail] = useState('');
   
-  function handleClick()
+  async function handleClick()
   {
     
     if(username!="")
     {
       localStorage.setItem("username",username);
       localStorage.setItem("password",email);
+
+      await register(email);
     }
     else
     {

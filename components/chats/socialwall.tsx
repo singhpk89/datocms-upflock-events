@@ -6,6 +6,7 @@ import firebase from "@lib/firebase";
 import PostItem from './postitem';
 import { ChatMsg } from '@lib/types';
 
+
 function SocialWall() {
 
     const [wallMessage, setWallMessage] = useState('');
@@ -124,6 +125,15 @@ return (
             </div>
 
         </div>
+
+
+        <button 
+        style={{ position: 'fixed', right: '25px', bottom: '70px', width: '50px', height: '50px', 
+        borderRadius: '35px', backgroundColor:'#845EF7', backgroundImage: 'url(http://localhost:3000/add.svg)' , 
+        border: 'none', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', }}
+        >
+            
+        </button>
 
 
     </div>

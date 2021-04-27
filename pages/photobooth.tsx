@@ -16,7 +16,7 @@ export default function PhotoBooth() {
         const href = dataUri;
         const link = document.createElement('a');
         link.href = href;
-        link.download = 'your file name' + '.jpeg';
+        link.download = 'booth-selfie' + '.jpeg';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
