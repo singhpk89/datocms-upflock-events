@@ -14,16 +14,27 @@
  * limitations under the License.
  */
 
+ import { GetStaticProps } from 'next';
 
  import Page from '@components/page';
  import Layout from '@components/layout';
  import Header from '@components/header';
- 
+ import JobsGrid from '@components/jobs-grid';
  import { META_DESCRIPTION } from '@lib/constants';
+import SponsorsGrid from '@components/sponsors-grid';
+
+import { getAllSponsors } from '@lib/cms-api';
+import { Sponsor } from '@lib/types';
 import SocialWall from '@components/chats/socialwall';
+
+
+type Props = {
+  sponsors: Sponsor[];
+};
+
  
  
- export default function Wall() {
+ export default function Wall({ sponsors }: Props) {
    const meta = {
      title: 'Social Wall',
      description: META_DESCRIPTION
@@ -33,10 +44,22 @@ import SocialWall from '@components/chats/socialwall';
      <Page meta={meta}>
        <Layout>
          <Header hero="Social Wall" description={meta.description} />
-         <SocialWall />
+         <SocialWall sponsors={sponsors} />
        </Layout>
      </Page>
    );
  }
+
+ 
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const sponsors = await getAllSponsors();
+
+  return {
+    props: {
+      sponsors
+    },
+    revalidate: 60
+  };
+};
  
  

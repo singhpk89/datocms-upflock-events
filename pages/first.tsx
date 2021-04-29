@@ -1,6 +1,8 @@
 import { ChangeEvent, useState } from 'react';
 import Link from 'next/link'
 import { register } from '@lib/user-api';
+import IconLogo from './../components/icons/icon-logo';
+import PlatformLogo from '@components/icons/icon-platform';
 
 
 export default function login() {
@@ -48,36 +50,47 @@ export default function login() {
   //   }
   // }
    return (
-      <div className="clsLogin">
+     <>
+
+
+      <div className="clsLogin  mt-2">
+       
         
-  <div className="grid">
+<div className="grid">
 
 <div className="form login">
 
-  <div className="form__field">
-    <label ><svg className="icon">
-    
-      </svg><span className="hidden">Username</span></label>
-    <input  id="login__username" onChange={handleChange} value={username} type="text" name="username" className="form__input" placeholder="Username" required />
-  </div>
+    <div className="margin-auto">
+        <img src="/logo-full.png"  className="margin-auto"/>
+    </div>
 
-  <div className="form__field">
-    <label ><svg className="icon">
 
-      </svg><span className="hidden">Password</span></label>
-    <input id="login__email" type="text" name="email" onChange={handleChange} value={email} className="form__input" placeholder="Enter Email" required />
-  </div>
-
-  <div className="form__field">
-            <Link href="/">
-            <input type="submit" onClick={handleClick}  value="Sign In" />
-            </Link>       
-  </div>
-</div>
+<div className="form__field">
+  <label ><svg className="icon">
+  
+    </svg><span className="hidden">Username</span></label>
+  <input  id="login__username" onChange={handleChange} value={username} type="text" name="username" className="form__input" placeholder="Username" required />
 </div>
 
+<div className="form__field">
+  <label ><svg className="icon">
 
-         
-      </div>	  
+    </svg><span className="hidden">Password</span></label>
+  <input id="login__email" type="text" name="email" onChange={handleChange} value={email} className="form__input" placeholder="Enter Email" required />
+</div>
+
+<div className="form__field">
+          <Link href="/">
+          <input type="submit" onClick={handleClick}  value="Sign In" />
+          </Link>       
+</div>
+</div>
+</div>
+
+
+       
+    </div>
+     </>
+     	  
    )
 }

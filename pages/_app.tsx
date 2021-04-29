@@ -19,6 +19,8 @@ import '@styles/global.css';
 import '@styles/nprogress.css';
 import '@styles/chrome-bug.css';
 
+import '@styles/leaderboard.css';
+
 
 
 

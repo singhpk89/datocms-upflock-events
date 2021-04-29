@@ -17,13 +17,15 @@
 module.exports = {
   images: {
     domains: [
+      'images.pexels.com',
       'www.datocms-assets.com',
       'a.storyblok.com',
       'images.ctfassets.net',
       'images.prismic.io',
       'cdn.aglty.io',
       'localhost', // For Strapi
-      '*'
+      '*',
+      'images.pexels.com'
     ],
     imageSizes: [24, 64, 300]
   }

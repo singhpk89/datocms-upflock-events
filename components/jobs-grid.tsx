@@ -17,6 +17,9 @@
 import { Job } from '@lib/types';
 import styles from './jobs-grid.module.css';
 
+
+import { getAllJobs } from '@lib/cms-api';
+
 type Props = {
   jobs: Job[];
 };
