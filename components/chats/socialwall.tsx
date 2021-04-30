@@ -40,7 +40,7 @@ return (
 
       <button 
         style={{ position: 'fixed', right: '25px', bottom: '70px', width: '50px', height: '50px', 
-        borderRadius: '35px', backgroundColor:'#845EF7', backgroundImage: 'url(http://localhost:1111/add.svg)' , 
+        borderRadius: '35px', backgroundColor:'#845EF7', backgroundImage: 'url(https://virtual.upflockdigitalconference.com/add.svg)' , 
         border: 'none', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', }}
         >
             
