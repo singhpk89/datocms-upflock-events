@@ -66,10 +66,13 @@ export type Sponsor = {
   youtubeSlug: string;
 };
 
+
+
 export type SponsorLink = {
   text: string;
   url: string;
 };
+
 
 export type Job = {
   id: string;

@@ -25,6 +25,7 @@
     "@termoxin/react-poll": "^1.0.12",
     "@types/react-bootstrap": "^0.32.25",
     "@types/react-tabs": "^2.3.2",
+    "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
     "chrome-aws-lambda": "5.5.0",
     "classnames": "2.2.6",

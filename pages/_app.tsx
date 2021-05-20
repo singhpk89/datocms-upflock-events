@@ -20,6 +20,7 @@ import '@styles/nprogress.css';
 import '@styles/chrome-bug.css';
 
 import '@styles/leaderboard.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 

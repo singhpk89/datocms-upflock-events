@@ -26,10 +26,13 @@ import SponsorsGrid from '@components/sponsors-grid';
 import { getAllSponsors } from '@lib/cms-api';
 import { Sponsor } from '@lib/types';
 import SocialWall from '@components/chats/socialwall';
+import { WallData } from '@lib/wall'
+import { API_URL, IMG_URL } from '@lib/constants';
+
 
 
 type Props = {
-  sponsors: Sponsor[];
+  sponsors: WallData[];
 };
 
  
@@ -39,6 +42,9 @@ type Props = {
      title: 'Social Wall',
      description: META_DESCRIPTION
    };
+
+
+   
  
    return (
      <Page meta={meta}>
@@ -50,9 +56,25 @@ type Props = {
    );
  }
 
+ async function parsePost(response){
+  if (!response.ok) {
+    const posts = await response.json();
+    const data = [];
+    posts.data.forEach(element => {
+      console.log(element);
+      let wall = new WallData( element.id,  element.username, element.title, element.message, element.message,element.created_at);
+      data.push(wall);
+    });
+    return sponsors;
+  }
+  return [];
+ }
  
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const sponsors = await getAllSponsors();
+    const response = await fetch(API_URL + 'getPost');
+    const sponsors = await parsePost(response);
+    //  const sponsors = await getAllSponsors();
+
 
   return {
     props: {

@@ -25,6 +25,9 @@
     U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+
+
+
 :root {
   --space: 4px;
   --space-2x: 8px;
@@ -161,6 +164,7 @@ svg circle {
   height: auto;
   clip: auto;
 }
+
 
 /* ------------------------------------ login page css ---------------------------------------- */
 @use postcss-preset-env {
@@ -1118,4 +1122,7 @@ a:hover, a:active, a:focus {
   /* bottom: -20px !important; */
 
 }
+
+/* #full { background: #0f0; height: 100% } */
+
 

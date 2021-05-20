@@ -20,6 +20,7 @@ import cn from 'classnames';
 import { Sponsor } from '@lib/types';
 import styles from './sponsor-section.module.css';
 import styleUtils from './utils.module.css';
+import Chatbubble from './chats/chatbubble';
 
 type Props = {
   sponsor: Sponsor;
@@ -47,16 +48,10 @@ export default function SponsorSection({ sponsor }: Props) {
         </a>
       </Link>
       <div className={styles.layout}>
-        <iframe
-          className={cn(styles.video, styleUtils.appear, styleUtils['appear-first'])}
-          allow="picture-in-picture"
-          allowFullScreen
-          frameBorder="0"
-          height="100%"
-          src={`https://youtube.com/embed/${sponsor.youtubeSlug}`}
-          title={sponsor.name}
-          width="100%"
-        />
+        <div
+          className={cn(styles.video, styleUtils.appear, styleUtils['appear-first'])}>
+          <Chatbubble type="expo"/>
+        </div>
         <div className={styles.container}>
           <div className={styles['name-and-logo']}>
             <Image
@@ -72,15 +67,7 @@ export default function SponsorSection({ sponsor }: Props) {
           </div>
           <p className={styles.description}>{sponsor.description}</p>
           <div className={styles['sponsor-details']}>
-            {/* <a
-              href={sponsor.callToActionLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              type="button"
-              className={styles.button}
-            >
-              {sponsor.callToAction}
-            </a> */}
+          
           </div>
           <div className={styles.resources}>
             <h2 className={styles.heading}>Resources</h2>

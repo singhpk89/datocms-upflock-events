@@ -31,6 +31,9 @@
  export const TWEET_TEXT = META_DESCRIPTION;
  export const COOKIE = 'user-id';
  export const META_CONTENT = 'UPFLOCK - Digital Network';
+//  export const API_URL = 'https://upflockdigitalconference.com/openmicapi/public/api/';
+ export const API_URL = 'http://127.0.0.1:9999/api/';
+ export const IMG_URL = 'http://127.0.0.1:9999/uploads/';
  
  // Remove process.env.NEXT_PUBLIC_... below and replace them with
  // strings containing your own privacy policy URL and copyright holder name
