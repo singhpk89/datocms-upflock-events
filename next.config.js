@@ -19,6 +19,7 @@ module.exports = {
     domains: [
       '127.0.0.1',
       'localhost',
+      'upflockdigitalconference.com',
       'images.pexels.com',
       'www.datocms-assets.com',
       'a.storyblok.com',
